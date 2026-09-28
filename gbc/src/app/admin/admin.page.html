@@ -1,0 +1,21 @@
+<ion-content [fullscreen]="true" class="login-page">
+  <main class="login-shell">
+    <form class="login-form" (ngSubmit)="onSubmit()">
+      <div class="brand-mark" aria-hidden="true">GBC</div>
+      <h1>Welcome</h1>
+      <p class="subtitle">Sign in to access your finance dashboard.</p>
+      <ion-item fill="outline" class="form-field">
+        <ion-label position="floating">Email</ion-label>
+        <ion-input type="email" name="email" autocomplete="email" [(ngModel)]="email" required></ion-input>
+      </ion-item>
+      <ion-item fill="outline" class="form-field">
+        <ion-label position="floating">Password</ion-label>
+        <ion-input type="password" name="password" autocomplete="current-password" [(ngModel)]="password" required></ion-input>
+      </ion-item>
+      <p *ngIf="errorMessage" class="login-error" role="alert">{{ errorMessage }}</p>
+      <ion-button expand="block" type="submit" class="login-button" [disabled]="isSubmitting">
+        {{ isSubmitting ? 'Signing in...' : 'Sign in' }}
+      </ion-button>
+    </form>
+  </main>
+</ion-content>

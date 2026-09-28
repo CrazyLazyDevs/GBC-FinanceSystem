@@ -68,3 +68,8 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+
+# Python backend runtime files
+__pycache__/
+*.py[cod]
+backend/*.db
