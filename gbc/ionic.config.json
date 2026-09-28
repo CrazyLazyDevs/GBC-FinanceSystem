@@ -1,0 +1,7 @@
+{
+  "name": "gbc",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
